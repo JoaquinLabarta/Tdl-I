@@ -1,0 +1,10 @@
+union fechapro{
+  struct {
+    shor int año;
+    unsigned char mes;
+    unsigned char dia;
+  } fecha;
+  int completo; 
+};
+
+-Ver bien el espacio que ocupa para que no haya quilombos al momento de usar.
