@@ -5,6 +5,8 @@ estudiantes extranjeros.*/
 
 #include <stdio.h>
 
+enum tipo {DNI = 0, PAS = 1};
+
 typedef union iden{
     int dni;
     char pasaporte[10];
@@ -15,10 +17,11 @@ typedef struct persona{
     char nombre[49];
     char legajo[8];
     union iden identificacion; 
+    enum tipo tipo;
 } persona;
 
 int main(){
-    persona p; int i;
+    persona p;
     printf("Ingrese nombre: ");
     scanf("%s",p.nombre);
     printf("\nIngrese apellido: ");
@@ -26,15 +29,15 @@ int main(){
     printf("\nIngrese legajo: ");
     scanf("%s",p.legajo);
     printf("\nIngrese identificacion (0 si es DNI, 1 si es pasaporte): ");
-    scanf("%d",&i);
+    scanf("%d",&p.tipo);
 
-    if(i==0){
+    if(p.tipo==0){
         printf("\nIngrese DNI: ");
         scanf("%d",&p.identificacion.dni);
         printf("\nEl estudiante %s %s numero de legajo %s tiene identificacion DNI: %d", p.apellido, p.nombre, p.legajo, p.identificacion.dni);
     } 
 
-    else if(i==1){
+    else if(p.tipo==1){
         printf("\nIngrese pasaporte: ");
         scanf("%s",p.identificacion.pasaporte);
         printf("\nEl estudiante %s %s numero de legajo %s tiene identificacion pasaporte: %s", p.apellido, p.nombre, p.legajo, p.identificacion.pasaporte);

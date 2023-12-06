@@ -1,6 +1,6 @@
-/*Se dispone de un arreglo con información de las precipitaciones de todos los días de todos los meses de los últimos 10 años.
-Se desea conocer para cada año el mes en que menos llovió y también cual es el año que tuvo menor precipitación promedio.
-Nota: por simplicidad asuma que todos los meses tienen 30 días. */
+/*Se dispone de un arreglo con informaciï¿½n de las precipitaciones de todos los dï¿½as de todos los meses de los ï¿½ltimos 10 aï¿½os.
+Se desea conocer para cada aï¿½o el mes en que menos lloviï¿½ y tambiï¿½n cual es el aï¿½o que tuvo menor precipitaciï¿½n promedio.
+Nota: por simplicidad asuma que todos los meses tienen 30 dï¿½as. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -27,13 +27,13 @@ int main() {
         }
     }
 
-    /* Proceso para encontrar el mes con menos lluvia y el año con el mayor promedio */
+    /* Proceso para encontrar el mes con menos lluvia y el aï¿½o con el mayor promedio */
     buscarMin(mesMenosLluvia, precipitacion, &anioConMayorPromedio);
 
-    printf("El año con el mayor promedio fue: %d\n", anioConMayorPromedio + 1);
+    printf("El aï¿½o con el mayor promedio fue: %d\n", anioConMayorPromedio + 1);
 
     for (int i = 0; i < ANIO; i++) {
-        printf("El mes que menos llovió para el año %d fue el mes %d\n", i + 1, mesMenosLluvia[i] + 1);
+        printf("El mes que menos lloviï¿½ para el aï¿½o %d fue el mes %d\n", i + 1, mesMenosLluvia[i] + 1);
     }
 
     return 0;

@@ -40,7 +40,7 @@ int main(){
 
 struct RGB16 convertir24a16(struct RGB24 p){
     struct RGB16 pConvert;
-    pConvert.red = p.red>>3;
+    pConvert.red = p.red>>3; 
     pConvert.blue = p.blue>>3;
     pConvert.green = p.green>>3;
     return pConvert;
@@ -49,7 +49,7 @@ struct RGB16 convertir24a16(struct RGB24 p){
 struct RGB24 convertir16a24(struct RGB16 p){
     struct RGB24 pConvert;
     pConvert.red = p.red<<3;
-    pConvert.blue = p.blue<<3;
+    pConvert.blue = p.blue<<3; 
     pConvert.green = p.green<<2;
     return pConvert;
 };
